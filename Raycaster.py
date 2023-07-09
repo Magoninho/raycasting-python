@@ -8,6 +8,7 @@ class Raycaster:
         self.player = player
 
     def castAllRays(self):
+        self.rays = []
         rayAngle = (self.player.rotationAngle - FOV/2)
         for i in range(NUM_RAYS):
             ray = Ray(rayAngle, self.player)
