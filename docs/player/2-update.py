@@ -8,7 +8,7 @@ class Player:
         self.radius = 3
         self.turnDirection = 0
         self.walkDirection = 0
-        self.rotationAngle = math.pi / 2 # 90 degrees
+        self.rotationAngle = 0
         self.moveSpeed = 2.5
         self.rotationSpeed = 2 * (math.pi / 180)
     
