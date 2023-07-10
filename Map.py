@@ -17,8 +17,8 @@ class Map:
         ]
 
     # checks if there is a wall at a certain coordinate (in pixels)
-    def hasWallAt(self, x, y):
-        return self.grid[y // TILESIZE][x // TILESIZE]
+    def has_wall_at(self, x, y):
+        return self.grid[int(y // TILESIZE)][int(x // TILESIZE)]
     
     def render(self, screen):
         for i in range(len(self.grid)):
