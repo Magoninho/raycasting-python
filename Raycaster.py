@@ -3,15 +3,16 @@ from settings import *
 from Ray import *
 
 class Raycaster:
-    def __init__(self, player):
+    def __init__(self, player, map):
         self.rays = []
         self.player = player
+        self.map = map
 
     def castAllRays(self):
         self.rays = []
         rayAngle = (self.player.rotationAngle - FOV/2)
         for i in range(NUM_RAYS):
-            ray = Ray(rayAngle, self.player)
+            ray = Ray(rayAngle, self.player, self.map)
             ray.cast()
             self.rays.append(ray)
 
