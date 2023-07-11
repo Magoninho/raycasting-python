@@ -29,6 +29,8 @@ class Ray:
 
         self.distance = 0
 
+        self.color = 255
+
     
     def cast(self):
         # HORIZONTAL CHECKING
@@ -42,7 +44,7 @@ class Ray:
 
         # finding y first
         if self.is_facing_up:
-            first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) - 1 # TODO: see if without -1 it works
+            first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) - 0.01 # TODO: see if without -1 it works
         elif self.is_facing_down:
             first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) + TILESIZE
         
@@ -96,7 +98,7 @@ class Ray:
         if self.is_facing_right:
             first_intersection_x = ((self.player.x // TILESIZE) * TILESIZE) + TILESIZE
         elif self.is_facing_left:
-            first_intersection_x = ((self.player.x // TILESIZE) * TILESIZE) - 1
+            first_intersection_x = ((self.player.x // TILESIZE) * TILESIZE) - 0.01
         
         first_intersection_y = self.player.y + (first_intersection_x - self.player.x) * math.tan(self.rayAngle)
         
@@ -150,10 +152,14 @@ class Ray:
             self.wall_hit_x = horizontal_hit_x
             self.wall_hit_y = horizontal_hit_y
             self.distance = horizontal_distance
+            self.color = 160
         else:
             self.wall_hit_x = vertical_hit_x
             self.wall_hit_y = vertical_hit_y
             self.distance = vertical_distance
+            # self.color = 255
+        
+        self.distance *= math.cos(self.player.rotationAngle - self.rayAngle)
 
 
 
