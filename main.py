@@ -24,8 +24,8 @@ while True:
 
     screen.fill((0,0,0))
 
-    map.render(screen)
-    player.render(screen)
+    # map.render(screen)
+    # player.render(screen)
     raycaster.render(screen)
     
     pygame.display.update()

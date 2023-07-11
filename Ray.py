@@ -27,6 +27,8 @@ class Ray:
         self.wall_hit_x = 0
         self.wall_hit_y = 0
 
+        self.distance = 0
+
     
     def cast(self):
         # HORIZONTAL CHECKING
@@ -137,24 +139,25 @@ class Ray:
         if found_horizontal_wall:
             horizontal_distance = distance_between(self.player.x, self.player.y, horizontal_hit_x, horizontal_hit_y)
         else:
-            horizontal_distance = 99999999
+            horizontal_distance = 999
         if found_vertical_wall:
             vertical_distance = distance_between(self.player.x, self.player.y, vertical_hit_x, vertical_hit_y)
         else:
-            vertical_distance = 999999999
+            vertical_distance = 999
         
 
         if horizontal_distance < vertical_distance:
             self.wall_hit_x = horizontal_hit_x
             self.wall_hit_y = horizontal_hit_y
+            self.distance = horizontal_distance
         else:
             self.wall_hit_x = vertical_hit_x
             self.wall_hit_y = vertical_hit_y
+            self.distance = vertical_distance
 
 
 
     def render(self, screen):
-        # temporary
         pygame.draw.line(screen, (255, 0, 0), 
                          (self.player.x, self.player.y), 
                          (self.wall_hit_x, self.wall_hit_y))
