@@ -157,11 +157,15 @@ class Ray:
             self.wall_hit_x = vertical_hit_x
             self.wall_hit_y = vertical_hit_y
             self.distance = vertical_distance
-            # self.color = 255
+            self.color = 255
         
         self.distance *= math.cos(self.player.rotationAngle - self.rayAngle)
 
-
+        self.color *= (1 / self.distance) * 60
+        if self.color > 255:
+            self.color = 255
+        elif self.color < 0:
+            self.color = 0
 
     def render(self, screen):
         pygame.draw.line(screen, (255, 0, 0), 

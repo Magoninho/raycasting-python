@@ -8,6 +8,7 @@ class Raycaster:
         self.player = player
         self.map = map
 
+
     def castAllRays(self):
         self.rays = []
         rayAngle = (self.player.rotationAngle - FOV/2)
@@ -32,5 +33,6 @@ class Raycaster:
             draw_end = line_height
 
             pygame.draw.rect(screen, (ray.color, ray.color, ray.color), (i*RES, draw_begin, RES, draw_end))
+            
 
             i += 1

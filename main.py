@@ -10,6 +10,8 @@ map = Map()
 player = Player()
 raycaster = Raycaster(player, map)
 
+background_image = pygame.image.load("background.png")
+
 clock = pygame.time.Clock()
 
 while True:
@@ -22,7 +24,7 @@ while True:
     player.update()
     raycaster.castAllRays()
 
-    screen.fill((0,0,0))
+    screen.blit(background_image, (0, 0, 10, 10))
 
     # map.render(screen)
     # player.render(screen)
