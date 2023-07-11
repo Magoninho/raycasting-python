@@ -24,7 +24,7 @@ class Raycaster:
         i = 0
         # rendering 2d rays from 2d view
         for ray in self.rays:
-            ray.render(screen)
+            # ray.render(screen)
             # rendering 3d walls over the 2d view
 
             line_height = (32 / ray.distance) * 415
