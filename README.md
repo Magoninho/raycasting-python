@@ -2,7 +2,7 @@
 ![demo](demo.gif)
 ![demo2](demo2.gif)
 
-This is the repository with all the code that will be used on my new raycasting tutorial on my [YouTube channel](https://www.youtube.com/@pythonista_4382). This project is very important because I really wanted to share this knowledge with everyone. The resources available online that explain this topic are not good in my opinion, so I decided to pick the best parts of each one and make The Definitive Raycasting Guide.
+This is the repository with all the code that will be used on my new [Raycasting tutorial](https://youtu.be/E18bSJezaUE) on my [YouTube channel](https://www.youtube.com/@pythonista_333?sub_confirmation=1). This project is very important because I really wanted to share this knowledge with everyone. The resources available online that explain this topic are not good in my opinion, so I decided to pick the best parts of each one and make The Definitive Raycasting Guide.
 
 ## How to run
 1. First, you need to have `pygame` installed 

@@ -44,7 +44,7 @@ class Ray:
 
         # finding y first
         if self.is_facing_up:
-            first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) - 0.01 # TODO: see if without -1 it works
+            first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) - 0.01
         elif self.is_facing_down:
             first_intersection_y = ((self.player.y // TILESIZE) * TILESIZE) + TILESIZE
         
