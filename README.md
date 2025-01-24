@@ -66,7 +66,7 @@ Menu Settings
 
 ## Acknowledgments
 
-Original inspiration from [https://github.com/Magoninho/raycasting-python](Magoninho/raycasting-python).
+Original inspiration from [https://github.com/Magoninho/raycasting-python](https://github.com/Magoninho/raycasting-python).
 
 Built with Pygame for game development and Typer for CLI options.
  
